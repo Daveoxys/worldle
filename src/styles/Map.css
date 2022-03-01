@@ -1,0 +1,19 @@
+.map {
+  text-align: center;
+  zoom: 125%;
+  margin-top: -10px;
+}
+
+.map-selected {
+  fill: #39f517;
+}
+
+.map-unselected {
+  fill: #2b303a;
+}
+
+.map-selected:hover,
+.map-unselected:hover {
+  cursor: pointer;
+  fill: goldenrod;
+}
