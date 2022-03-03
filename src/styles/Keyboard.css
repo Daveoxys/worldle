@@ -1,0 +1,47 @@
+.keyboard {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  justify-content: center;
+  padding: 5px;
+}
+
+button {
+  font-size: 25px;
+  font-weight: bold;
+  border: 0;
+  background-color: rgba(128, 128, 128, 0.411);
+  margin: 2px 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 14px;
+  text-transform: uppercase;
+  width: 5%;
+}
+
+button:hover {
+  background-color: rgb(0, 102, 255);
+  color: aliceblue;
+}
+
+button:active {
+  background-color: rgba(0, 131, 0, 0.603);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.308);
+  transform: translateY(2px);
+}
+
+.keyboard-top {
+  padding: 2px;
+}
+
+.keyboard-middle {
+  padding: 2px;
+}
+
+.keyboard-bottom {
+  padding: 2px;
+}
+
+.big-button {
+  width: 7.6%;
+}

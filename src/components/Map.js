@@ -4,7 +4,7 @@ import "../styles/Map.css";
 
 const Map = () => {
   const [selected, onSelected] = useState(null);
-
+  console.log({ selected });
   return (
     <div className="map">
       <h3>Select your continent to play!</h3>
