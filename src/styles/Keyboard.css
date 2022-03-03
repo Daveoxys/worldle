@@ -1,0 +1,36 @@
+.keyboard {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+button {
+  font-size: 30px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: rgba(0, 255, 0, 0.603);
+}
+
+button:active {
+  background-color: rgba(0, 255, 0, 0.603);
+  box-shadow: 3px 3px 3px rgba(66, 67, 66, 0.055);
+  transform: translateY(2px);
+}
+
+.keyboard-top {
+  padding: 5px;
+}
+
+.keyboard-middle {
+  padding: 5px;
+}
+
+.keyboard-bottom {
+  padding: 5px;
+}

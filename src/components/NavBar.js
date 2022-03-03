@@ -4,7 +4,9 @@ import "../styles/NavBar.css";
 const NavBar = () => {
   return (
     <>
-      <h1 className="nav-header">Worldle</h1>
+      <h1 className="nav-header">
+        <span>Worldle</span>
+      </h1>
     </>
   );
 };
