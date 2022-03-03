@@ -6,7 +6,7 @@
   padding: 5px;
 }
 
-button {
+.keyboard-button {
   font-size: 25px;
   font-weight: bold;
   border: 0;
@@ -19,12 +19,12 @@ button {
   width: 5%;
 }
 
-button:hover {
+.keyboard-button:hover {
   background-color: rgb(0, 102, 255);
   color: aliceblue;
 }
 
-button:active {
+.keyboard-button:active {
   background-color: rgba(0, 131, 0, 0.603);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.308);
   transform: translateY(2px);
