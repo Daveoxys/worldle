@@ -9,13 +9,11 @@ button {
   font-size: 25px;
   font-weight: bold;
   border: 0;
-  flex: 1;
   background-color: rgba(128, 128, 128, 0.411);
   margin: 2px 5px 0 0;
   border-radius: 5px;
-  border-style: dotted;
   cursor: pointer;
-  padding: 10px;
+  padding: 14px;
   text-transform: uppercase;
   width: 5%;
 }
@@ -32,15 +30,15 @@ button:active {
 }
 
 .keyboard-top {
-  padding: 5px;
+  padding: 2px;
 }
 
 .keyboard-middle {
-  padding: 5px;
+  padding: 2px;
 }
 
 .keyboard-bottom {
-  padding: 5px;
+  padding: 2px;
 }
 
 .big-button {
