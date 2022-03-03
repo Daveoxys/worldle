@@ -29,7 +29,7 @@ const Keyboard = () => {
       </div>
       <div class="keyboard-bottom">
         <button data-key="enter" class="big-button">
-          ent
+          ⏎
         </button>
         <button data-key="a">z</button>
         <button data-key="s">x</button>
@@ -39,7 +39,7 @@ const Keyboard = () => {
         <button data-key="h">n</button>
         <button data-key="j">m</button>
         <button data-key="backspace" class="big-button">
-          del
+          ⇦
         </button>
       </div>
     </div>
