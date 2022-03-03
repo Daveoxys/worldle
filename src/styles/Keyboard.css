@@ -6,11 +6,18 @@
 }
 
 button {
-  font-size: 30px;
-  border: 2px solid black;
+  font-size: 25px;
+  font-weight: bold;
+  border: 0;
+  flex: 1;
+  background-color: rgba(128, 128, 128, 0.411);
+  margin: 2px 5px 0 0;
   border-radius: 5px;
+  border-style: dotted;
   cursor: pointer;
   padding: 10px;
+  text-transform: uppercase;
+  width: 5%;
 }
 
 button:hover {
@@ -33,4 +40,8 @@ button:active {
 
 .keyboard-bottom {
   padding: 5px;
+}
+
+.big-button {
+  width: 8%;
 }
