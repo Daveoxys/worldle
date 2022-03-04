@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Alert from "./Alert";
+import Continents from "../data/continents.json";
 import "../styles/Game.css";
 
 const Game = () => {
   // const getCountries = (continent) =>
-  //   Object.values(json).filter((country) => country.continent === continent);
+  //   Object.values(json).filter(
+  //     (country) => country.continent === continent
+  //   );
 
   // const getRandomCountry = (continent) => {
   //   const countries = getCountries(continent);
@@ -47,6 +50,18 @@ const Game = () => {
         <input placeholder="Country" />
         <button className="submit-guess">Submit</button>
       </form>
+
+      <div className="countries">
+        {Continents.map((country) => {
+          if (country.continent === "eu") {
+            return (
+              <h4>
+                {country.country}, {country.city}
+              </h4>
+            );
+          }
+        })}
+      </div>
     </div>
   );
 };

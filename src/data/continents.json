@@ -1,24 +1,32 @@
-{
-    "eu": [
-        {
-            "country": "Belgium",
-            "city": "Brussels"
-        },
-        {
-            "country": "England",
-            "city": "London"
-        },
-        {
-            "country": "France",
-            "city": "Paris"
-        },
-        {
-            "country": "Germany",
-            "city": "Berlin"
-        },
-        {
-            "country": "Spain",
-            "city": "Madrid"
-        }
-    ]
-}
+[
+    {
+        "continent" : "eu",
+        "country": "Belgium",
+        "city": "Brussels"
+    },
+    {
+        "continent" : "eu",
+        "country": "England",
+        "city": "London"
+    },
+    {
+        "continent" : "eu",
+        "country": "France",
+        "city": "Paris"
+    },
+    {
+        "continent" : "eu",
+        "country": "Germany",
+        "city": "Berlin"
+    },
+    {
+        "continent" : "eu",
+        "country": "Spain",
+        "city": "Madrid"
+    },
+    {
+        "continent": "na",
+        "country": "USA",
+        "city": "Washington"
+    }
+]
