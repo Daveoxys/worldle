@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import Alert from "./Alert";
-import Continents from "../data/continents.json";
+import continents from "../data/continents.json";
 import "../styles/Game.css";
 
 const Game = () => {
+  const getRandomCountry = () => {
+    const randomIndex = Math.floor(Math.random() * continents.length);
+    return continents[randomIndex];
+  };
+
   // const getCountries = (continent) =>
   //   Object.values(json).filter(
   //     (country) => country.continent === continent
@@ -20,13 +25,17 @@ const Game = () => {
       message: "",
       success: false,
     },
-    guesses: {
-      remaining: 5,
-    },
   };
 
   const [alert, setAlert] = useState(initialState.alert);
-  const [guesses, setGuesses] = useState(initialState.guesses);
+  const [guesses, setGuesses] = useState(5);
+
+  const decrementGuesses = () => {
+    if (guesses === 0) {
+      return;
+    }
+    setGuesses((prevGuesses) => prevGuesses - 1);
+  };
 
   const handleGuess = (event) => {
     event.preventDefault();
@@ -37,10 +46,17 @@ const Game = () => {
     //if usersGuess !== JSON answer
     //attempts remaining -1
 
-    setAlert({
-      message: `Incorrect - you have ${guesses.remaining} attempts remaining`,
-      success: false,
-    });
+    if (guesses === 1) {
+      setAlert({
+        message: `Incorrect - you have ${guesses} life remaining`,
+        success: false,
+      });
+    } else {
+      setAlert({
+        message: `Incorrect - you have ${guesses} lives remaining`,
+        success: false,
+      });
+    }
   };
 
   return (
@@ -48,12 +64,14 @@ const Game = () => {
       <form onSubmit={handleGuess}>
         <Alert message={alert.message} success={alert.success} />
         <input placeholder="Country" />
-        <button className="submit-guess">Submit</button>
+        <button className="submit-guess" onClick={decrementGuesses}>
+          Submit
+        </button>
       </form>
 
-      <div className="countries">
+      {/* <div className="countries">
         {Continents.map((country) => {
-          if (country.continent === "eu") {
+          if (country.continent === "na") {
             return (
               <h4>
                 {country.country}, {country.city}
@@ -61,7 +79,7 @@ const Game = () => {
             );
           }
         })}
-      </div>
+      </div> */}
     </div>
   );
 };

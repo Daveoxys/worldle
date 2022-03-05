@@ -44,14 +44,19 @@ function App() {
         <hr />
         <p>Worldle will refresh new answers every day!</p>
       </Popup>
+
       <NavBar />
+
       <div className="toggle">
         <label onClick={switchTheme}>
           {theme === "light" ? "Dark" : "Light"} Theme
         </label>
       </div>
+
       <Map />
+
       <Game />
+
       <Keyboard />
     </div>
   );
