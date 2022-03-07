@@ -36,9 +36,9 @@ function App() {
           each continent!
         </p>
         <p>
-          You will get five tries to correctly guess the country and capital
-          city in each continent, after each try any correct letters in your
-          guess will show how close you were to the correct answer.
+          You will get 5 tries to correctly guess the country and capital city
+          in each continent, after each try any correct letters in your guess
+          will show how close you were to the correct answer.
         </p>
         <hr />
         <p>Worldle will refresh new answers every day!</p>
