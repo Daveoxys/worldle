@@ -103,12 +103,12 @@ const WordGame = () => {
           absentCharArray.push(word.charAt(index));
       }
     }
-    if (matchCount === 5) {
+    if (matchCount === 6) {
       status = "WIN";
       handleMessage("YOU WON");
-    } else if (rowIndex + 1 === 6) {
+    } else if (rowIndex + 1 === 5) {
       status = "LOST";
-      handleMessage(boardData.solution);
+      handleMessage(`Answer: ${boardData.solution}`);
     }
     boardRowStatus.push(rowStatus);
     boardWords[rowIndex] = word;
@@ -135,13 +135,13 @@ const WordGame = () => {
   };
 
   const handleKeyPress = (key) => {
-    if (boardData.rowIndex > 5 || boardData.status === "WIN") return;
+    if (boardData.rowIndex > 6 || boardData.status === "WIN") return;
     if (key === "ENTER") {
-      if (charArray.length === 5) {
+      if (charArray.length === 6) {
         let word = charArray.join("").toLowerCase();
         if (!wordList[word.charAt(0)].includes(word)) {
           handleError();
-          handleMessage("Not in word list");
+          handleMessage("Not a valid city");
           return;
         }
         enterBoardWord(word);
@@ -154,7 +154,7 @@ const WordGame = () => {
     if (key === "⌫") {
       charArray.splice(charArray.length - 1, 1);
       setCharArray([...charArray]);
-    } else if (charArray.length < 5) {
+    } else if (charArray.length < 6) {
       charArray.push(key);
       setCharArray([...charArray]);
     }
@@ -170,14 +170,14 @@ const WordGame = () => {
       </div>
       {message && <div className="message">{message}</div>}
       <div className="cube">
-        {[0, 1, 2, 3, 4, 5].map((row, rowIndex) => (
+        {[0, 1, 2, 3, 4].map((row, rowIndex) => (
           <div
             className={`cube-row ${
               boardData && row === boardData.rowIndex && error && "error"
             }`}
             key={rowIndex}
           >
-            {[0, 1, 2, 3, 4].map((column, letterIndex) => (
+            {[0, 1, 2, 3, 4, 5].map((column, letterIndex) => (
               <div
                 key={letterIndex}
                 className={`letter ${

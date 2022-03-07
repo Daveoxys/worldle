@@ -2,13 +2,12 @@
 
 body {
   font-family: "Secular One", sans-serif;
-  background-color: white;
 }
 
 .App {
   color: var(--text-primary);
   background-color: var(--background);
-  height: calc(100vh);
+  height: calc(160vh);
 }
 
 .toggle {
