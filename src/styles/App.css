@@ -7,11 +7,8 @@ body {
 .App {
   color: var(--text-primary);
   background-color: var(--background);
-<<<<<<< HEAD
   height: calc(160vh);
-=======
   height: 152vh;
->>>>>>> ddb48c3 (popup fix and css)
 }
 
 .toggle {
