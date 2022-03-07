@@ -21,44 +21,44 @@ const Game = () => {
     }
   };
 
-  const initialState = {
-    alert: {
-      message: "",
-      success: false,
-    },
-  };
+//   const initialState = {
+//     alert: {
+//       message: "",
+//       success: false,
+//     },
+//   };
 
-  const [alert, setAlert] = useState(initialState.alert);
-  const [guesses, setGuesses] = useState(5);
+//   const [alert, setAlert] = useState(initialState.alert);
+//   const [guesses, setGuesses] = useState(5);
 
-  const decrementGuesses = () => {
-    if (guesses === 0) {
-      return;
-    }
-    setGuesses((prevGuesses) => prevGuesses - 1);
-  };
+//   const decrementGuesses = () => {
+//     if (guesses === 0) {
+//       return;
+//     }
+//     setGuesses((prevGuesses) => prevGuesses - 1);
+//   };
 
-  const handleGuess = (event) => {
-    event.preventDefault();
-    //if usersGuess === JSON answer
-    //setAlert({ message: "Well done!", success: true });
-    //renderCity && reset initialState
+//   const handleGuess = (event) => {
+//     event.preventDefault();
+//     //if usersGuess === JSON answer
+//     //setAlert({ message: "Well done!", success: true });
+//     //renderCity && reset initialState
 
-    //if usersGuess !== JSON answer
-    //attempts remaining -1
+//     //if usersGuess !== JSON answer
+//     //attempts remaining -1
 
-    if (guesses === 1) {
-      setAlert({
-        message: `Incorrect - you have ${guesses} life remaining`,
-        success: false,
-      });
-    } else {
-      setAlert({
-        message: `Incorrect - you have ${guesses} lives remaining`,
-        success: false,
-      });
-    }
-  };
+//     if (guesses === 1) {
+//       setAlert({
+//         message: `Incorrect - you have ${guesses} life remaining`,
+//         success: false,
+//       });
+//     } else {
+//       setAlert({
+//         message: `Incorrect - you have ${guesses} lives remaining`,
+//         success: false,
+//       });
+//     }
+//   };
 
   //useEffect runs getRandomCountry on first render only
   useEffect(() => {
@@ -78,19 +78,19 @@ const Game = () => {
         </button>
       </form>
 
-      {/* <div className="countries">
-        {Continents.map((country) => {
-          if (country.continent === "na") {
-            return (
-              <h4>
-                {country.country}, {country.city}
-              </h4>
-            );
-          }
-        })}
-      </div> */}
-    </div>
-  );
-};
+//       {/* <div className="countries">
+//         {Continents.map((country) => {
+//           if (country.continent === "na") {
+//             return (
+//               <h4>
+//                 {country.country}, {country.city}
+//               </h4>
+//             );
+//           }
+//         })}
+//       </div> */}
+//     </div>
+//   );
+// };
 
-export default Game;
+// export default Game;

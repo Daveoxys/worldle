@@ -1,11 +1,12 @@
-import "../styles/App.css";
+import React, { useState, useEffect } from "react";
 import useLocalStorage from "use-local-storage";
+
 import NavBar from "./NavBar";
-import Map from "./Map";
-import Keyboard from "./Keyboard";
-import Game from "./Game";
+//import Game from "./Game";
 import Popup from "./Popup";
-import { useState, useEffect } from "react";
+import Map from "./Map";
+import WordGame from "./wordGame";
+import "../styles/App.css";
 
 function App() {
   const [timedPopup, setTimedPopup] = useState(false);
@@ -52,12 +53,8 @@ function App() {
           {theme === "light" ? "Dark" : "Light"} Theme
         </label>
       </div>
-
       <Map />
-
-      <Game />
-
-      <Keyboard />
+      <WordGame />
     </div>
   );
 }
