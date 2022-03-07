@@ -8,6 +8,7 @@ body {
   color: var(--text-primary);
   background-color: var(--background);
   height: calc(160vh);
+  height: 152vh;
 }
 
 .toggle {
