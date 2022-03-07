@@ -1,24 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Alert from "./Alert";
-import continents from "../data/continents.json";
+import eu from "../data/eu.json";
 import "../styles/Game.css";
 
 const Game = () => {
+  const [country, setCountry] = useState(null);
+
   const getRandomCountry = () => {
-    const randomIndex = Math.floor(Math.random() * continents.length);
-    return continents[randomIndex];
+    const randomIndex = Math.floor(Math.random() * eu.length);
+    return eu[randomIndex];
   };
 
-  // const getCountries = (continent) =>
-  //   Object.values(json).filter(
-  //     (country) => country.continent === continent
-  //   );
-
-  // const getRandomCountry = (continent) => {
-  //   const countries = getCountries(continent);
-  //   const randomIndex = Math.ceil(Math.random() * countries.length);
-  //   return countries[randomIndex];
-  // };
+  const compareAnswer = () => {
+    const user = "Germany";
+    console.log(`country is ${country}`);
+    if (country === user) {
+      return "Correct";
+    } else {
+      return "Unlucky";
+    }
+  };
 
   const initialState = {
     alert: {
@@ -59,8 +60,16 @@ const Game = () => {
     }
   };
 
+  //useEffect runs getRandomCountry on first render only
+  useEffect(() => {
+    setCountry(getRandomCountry());
+    console.log(`getRandomCountry is ${getRandomCountry()}`);
+  }, []);
+
   return (
     <div className="Game">
+      <h1>{compareAnswer()}</h1>
+
       <form onSubmit={handleGuess}>
         <Alert message={alert.message} success={alert.success} />
         <input placeholder="Country" />
