@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useLocalStorage from "use-local-storage";
-
 import NavBar from "./NavBar";
-//import Game from "./Game";
 import Popup from "./Popup";
 import Map from "./Map";
 import WordGame from "./wordGame";
@@ -14,7 +12,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setTimedPopup(true);
-    }, 100);
+    }, 5);
   }, []);
 
   const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
