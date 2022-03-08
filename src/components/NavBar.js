@@ -7,7 +7,6 @@ const NavBar = () => {
   return (
     <div className="nav">
       <h1 className="nav-header">Worldle</h1>
-
       {/* <ul className="nav__links">
         <li>
           <Link to="/" className="nav__links-link">
