@@ -1,37 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Secular+One&family=Shizuru&display=swap");
 
-.toggle {
-  margin-top: -70px;
-  margin-right: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  color: var(--text-primary);
-  background-color: var(--background);
-  float: right;
-  background-color: rgba(128, 128, 128, 0.411);
-  cursor: pointer;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.toggle:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
 .container {
   display: flex;
   margin-top: 50px;
   position: relative;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 90vh;
   align-items: center;
 }
 .message {

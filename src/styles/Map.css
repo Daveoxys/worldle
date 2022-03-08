@@ -5,7 +5,7 @@
 }
 
 .map-selected {
-  fill: rgba(0, 131, 0, 0.603);
+  fill: #6aaa64;
 }
 
 .map-unselected {
@@ -15,5 +15,5 @@
 .map-selected:hover,
 .map-unselected:hover {
   cursor: pointer;
-  fill: rgb(0, 102, 255);
+  fill: #c9b458;
 }

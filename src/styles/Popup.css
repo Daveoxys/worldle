@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--background);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,12 +12,11 @@
 
 .popup-inner {
   position: relative;
-  padding: 32px;
+  padding: 35px;
+  border-radius: 9px;
   width: 100%;
   max-width: 640px;
-  text-align: center;
-  background-color: var(--background);
-  border: solid 1px white;
+  background-color: #787c7e;
 }
 
 .popup-inner .close-btn {
