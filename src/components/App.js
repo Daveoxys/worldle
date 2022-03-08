@@ -30,19 +30,14 @@ function App() {
 
   return (
     <div className="App" data-theme={theme}>
-      <Popup trigger={timedPopup} setTrigger={setTimedPopup} />
+      <NavBar switchTheme={switchTheme} theme={theme} />
 
-      <NavBar />
       <Switch>
         <Route exact path="/" component={Map} />
-        <Route exact path="/word-game/:continent" component={WordGame} />
+        <Route exact path="/:continent" component={WordGame} />
       </Switch>
 
-      <div className="toggle">
-        <label onClick={switchTheme}>
-          {theme === "light" ? "Dark" : "Light"} Theme
-        </label>
-      </div>
+      <Popup trigger={timedPopup} setTrigger={setTimedPopup} />
     </div>
   );
 }

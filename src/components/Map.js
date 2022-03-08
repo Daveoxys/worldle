@@ -11,7 +11,7 @@ const Map = () => {
       <h3>Select your continent to play!</h3>
       <WorldMap
         onSelect={(continent) => {
-          history.push(`/word-game/${continent}`);
+          history.push(`/${continent}`);
         }}
       />
     </div>

@@ -30,3 +30,7 @@ a {
 a:visited {
   color: black;
 }
+
+ul {
+  list-style-type: none;
+}

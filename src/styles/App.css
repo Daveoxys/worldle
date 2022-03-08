@@ -7,11 +7,12 @@ body {
 .App {
   color: var(--text-primary);
   background-color: var(--background);
+  height: 100vh;
 }
 
 .toggle {
   margin-top: -80px;
-  margin-right: 10px;
+  margin-right: 40px;
   padding: 10px;
   border-radius: 10px;
   color: var(--text-primary);

@@ -5,7 +5,7 @@
   align-items: center;
   margin-bottom: 10px;
 }
-.row {
+.key-row {
   width: auto;
   display: flex;
   flex-direction: row;

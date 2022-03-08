@@ -3,23 +3,21 @@ import { Link } from "react-router-dom";
 
 import "../styles/NavBar.css";
 
-const NavBar = () => {
+const NavBar = ({ switchTheme, theme }) => {
   return (
     <div className="nav">
       <h1 className="nav-header">Worldle</h1>
-      <ul className="nav__links">
-        <li>
-          <Link to="/" className="nav__links-link">
-            Home
-          </Link>
-        </li>
-
-        <li>
-          <Link to="/word-game" className="nav__links-link">
-            Word Game
-          </Link>
+      <ul>
+        <li className="nav__links">
+          <Link to="/">Home</Link>
         </li>
       </ul>
+
+      <div className="toggle">
+        <label onClick={switchTheme}>
+          {theme === "light" ? "Dark" : "Light"} Theme
+        </label>
+      </div>
     </div>
   );
 };

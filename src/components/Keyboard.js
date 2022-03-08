@@ -6,7 +6,7 @@ const Keyboard = ({ boardData, handleKeyPress }) => {
   return (
     <div className="keyboard-rows">
       {keys.map((item, index) => (
-        <div className="row" key={index}>
+        <div className="key-row" key={index}>
           {item.map((key, keyIndex) => (
             <button
               key={keyIndex}
