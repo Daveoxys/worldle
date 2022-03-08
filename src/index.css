@@ -22,3 +22,11 @@ code {
   --background: rgb(0, 0, 0);
   --text-primary: white;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}

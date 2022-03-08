@@ -1,12 +1,34 @@
-.nav-header {
-  font-size: 75px;
-  letter-spacing: 25px;
-  font-weight: normal;
-  text-transform: uppercase;
-  text-align: center;
+.nav {
   margin-top: 0;
   margin-bottom: 0;
   width: 100%;
-  color: #2b303a;
   background-color: #87cbac;
+}
+.nav-header {
+  letter-spacing: 25px;
+  font-size: 75px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 0;
+  color: #2b303a;
+}
+
+.nav__links {
+  float: left;
+  margin-top: -75px;
+  margin-bottom: 0;
+  margin-left: 10px;
+  padding: 2px 5px 2px 5px;
+  background-color: rgba(128, 128, 128, 0.411);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.nav__links-item {
+  top: 0;
+  margin: 0;
+  padding: 5px;
+  list-style-type: none;
 }

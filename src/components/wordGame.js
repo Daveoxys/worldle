@@ -12,7 +12,7 @@ const WordGame = () => {
   const [charArray, setCharArray] = useState([]);
 
   const resetBoard = () => {
-    var alphabetIndex = Math.floor(Math.random() * 26);
+    var alphabetIndex = Math.floor(Math.random() * 22);
     var wordIndex = Math.floor(
       Math.random() * wordList[String.fromCharCode(97 + alphabetIndex)].length
     );
@@ -33,7 +33,7 @@ const WordGame = () => {
 
   useEffect(() => {
     if (!boardData || !boardData.solution) {
-      var alphabetIndex = Math.floor(Math.random() * 26);
+      var alphabetIndex = Math.floor(Math.random() * 22);
       var wordIndex = Math.floor(
         Math.random() * wordList[String.fromCharCode(97 + alphabetIndex)].length
       );

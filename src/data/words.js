@@ -1,14 +1,25 @@
 export const wordList = {
-  //eu
-  a: ["dublin"],
-  //na
-  b: ["boston"],
-  //sa
-  c: ["havana"],
-  //af
-  d: ["harare"],
-  //asia
-  e: ["manila"],
-  //aus
-  f: ["sydney"],
+  //22
+  a: ["athens", "austin"],
+  b: ["boston", "berlin", "beirut", "bombay", "bremen", "bilbao", "bruges"],
+  c: ["campos", "cancun"],
+  d: ["dublin", "dallas", "denver", "durham", "durban"],
+  e: ["elpaso"],
+  f: ["fresno"],
+  g: ["gdansk"],
+  h: ["harare", "havana"],
+  j: ["jaipur", "jersey"],
+  k: ["krakow", "kansas"],
+  l: ["london", "lisbon", "lahore"],
+  m: ["manila", "madrid", "mumbai", "moscow", "munich", "malaga"],
+  n: ["nantes", "newark", "naples"],
+  o: ["ottawa", "oshawa", "oxford", "odense", "oldham", "ostend"],
+  p: ["prague", "phuket", "poznan"],
+  q: ["quebec"],
+  r: ["riyadh", "rennes", "rivera"],
+  s: ["santos", "sydney"],
+  t: ["taipei", "tehran"],
+  v: ["vienna", "venice"],
+  w: ["warsaw"],
+  z: ["zambia", "zagreb", "zurich"],
 };

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useLocalStorage from "use-local-storage";
-
 import NavBar from "./NavBar";
-//import Game from "./Game";
 import Popup from "./Popup";
 import Map from "./Map";
 import WordGame from "./wordGame";
@@ -44,6 +42,12 @@ function App() {
       </Popup>
 
       <NavBar />
+
+      {/* <NavBar />
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route exact path="/word-game" component={WordGame} />
+      </Switch> */}
 
       <div className="toggle">
         <label onClick={switchTheme}>
