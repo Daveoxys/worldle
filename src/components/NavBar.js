@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "../styles/NavBar.css";
 
@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <div className="nav">
       <h1 className="nav-header">Worldle</h1>
-      {/* <ul className="nav__links">
+      <ul className="nav__links">
         <li>
           <Link to="/" className="nav__links-link">
             Home
@@ -19,7 +19,7 @@ const NavBar = () => {
             Word Game
           </Link>
         </li>
-      </ul> */}
+      </ul>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Keyboard from "./Keyboard";
 import { wordList } from "../data/words";
 import "../styles/wordGame.css";
@@ -10,15 +11,19 @@ const WordGame = () => {
   const [message, setMessage] = useState(null);
   const [error, setError] = useState(false);
   const [charArray, setCharArray] = useState([]);
+  const { continent } = useParams();
+  console.log(continent);
 
   const resetBoard = () => {
     var alphabetIndex = Math.floor(Math.random() * 22);
     var wordIndex = Math.floor(
-      Math.random() * wordList[String.fromCharCode(97 + alphabetIndex)].length
+      Math.random() *
+        wordList[continent][String.fromCharCode(97 + alphabetIndex)].length
     );
     let newBoardData = {
       ...boardData,
-      solution: wordList[String.fromCharCode(97 + alphabetIndex)][wordIndex],
+      solution:
+        wordList[continent][String.fromCharCode(97 + alphabetIndex)][wordIndex],
       rowIndex: 0,
       boardWords: [],
       boardRowStatus: [],
@@ -35,11 +40,15 @@ const WordGame = () => {
     if (!boardData || !boardData.solution) {
       var alphabetIndex = Math.floor(Math.random() * 22);
       var wordIndex = Math.floor(
-        Math.random() * wordList[String.fromCharCode(97 + alphabetIndex)].length
+        Math.random() *
+          wordList[continent][String.fromCharCode(97 + alphabetIndex)].length
       );
       let newBoardData = {
         ...boardData,
-        solution: wordList[String.fromCharCode(97 + alphabetIndex)][wordIndex],
+        solution:
+          wordList[continent][String.fromCharCode(97 + alphabetIndex)][
+            wordIndex
+          ],
         rowIndex: 0,
         boardWords: [],
         boardRowStatus: [],
@@ -139,7 +148,7 @@ const WordGame = () => {
     if (key === "ENTER") {
       if (charArray.length === 6) {
         let word = charArray.join("").toLowerCase();
-        if (!wordList[word.charAt(0)].includes(word)) {
+        if (!wordList[continent][word.charAt(0)].includes(word)) {
           handleError();
           handleMessage("Not a valid city");
           return;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Switch, Route } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 import NavBar from "./NavBar";
 import Popup from "./Popup";
@@ -32,20 +33,16 @@ function App() {
       <Popup trigger={timedPopup} setTrigger={setTimedPopup} />
 
       <NavBar />
-
-      {/* <NavBar />
       <Switch>
-        <Route exact path="/" component={App} />
-        <Route exact path="/word-game" component={WordGame} />
-      </Switch> */}
+        <Route exact path="/" component={Map} />
+        <Route exact path="/word-game/:continent" component={WordGame} />
+      </Switch>
 
       <div className="toggle">
         <label onClick={switchTheme}>
           {theme === "light" ? "Dark" : "Light"} Theme
         </label>
       </div>
-      <Map />
-      <WordGame />
     </div>
   );
 }

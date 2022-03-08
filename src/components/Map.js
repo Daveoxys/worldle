@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
+import { useHistory } from "react-router-dom";
 import WorldMap from "react-world-map";
 import "../styles/Map.css";
 
 const Map = () => {
-  const [selected, setSelected] = useState(null);
-  // console.log({ selected });
+  const history = useHistory();
 
   return (
     <div className="map">
       <h3>Select your continent to play!</h3>
-      <WorldMap selected={selected} onSelect={setSelected} />
+      <WorldMap
+        onSelect={(continent) => {
+          history.push(`/word-game/${continent}`);
+        }}
+      />
     </div>
   );
 };
