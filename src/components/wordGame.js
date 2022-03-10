@@ -12,7 +12,6 @@ const WordGame = () => {
   const [error, setError] = useState(false);
   const [charArray, setCharArray] = useState([]);
   const { continent } = useParams();
-  console.log(continent);
 
   const resetBoard = () => {
     var alphabetIndex = Math.floor(Math.random() * 22);
@@ -143,6 +142,7 @@ const WordGame = () => {
     setBoardData(newBoardData);
   };
 
+  //either remove validation or check against all words irrespective of continent?
   const handleKeyPress = (key) => {
     if (boardData.rowIndex > 6 || boardData.status === "WIN") return;
     if (key === "ENTER") {
@@ -173,6 +173,7 @@ const WordGame = () => {
   return (
     <div className="container">
       <div className="top">
+        <h3>{continent}</h3>
         <button className="reset-board" onClick={resetBoard}>
           {"\u27f3"}
         </button>
