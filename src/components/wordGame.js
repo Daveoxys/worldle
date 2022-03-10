@@ -36,6 +36,10 @@ const WordGame = () => {
   };
 
   useEffect(() => {
+    resetBoard();
+  }, []);
+
+  useEffect(() => {
     if (!boardData || !boardData.solution) {
       var alphabetIndex = Math.floor(Math.random() * 22);
       var wordIndex = Math.floor(
@@ -59,7 +63,7 @@ const WordGame = () => {
       setBoardData(newBoardData);
       localStorage.setItem("board-data", JSON.stringify(newBoardData));
     }
-  }, [boardData]);
+  }, [boardData, continent]);
 
   const handleMessage = (message) => {
     setMessage(message);
@@ -142,7 +146,6 @@ const WordGame = () => {
     setBoardData(newBoardData);
   };
 
-  //either remove validation or check against all words irrespective of continent?
   const handleKeyPress = (key) => {
     if (boardData.rowIndex > 6 || boardData.status === "WIN") return;
     if (key === "ENTER") {
