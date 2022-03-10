@@ -15,6 +15,7 @@ const WordGame = () => {
 
   const resetBoard = () => {
     var alphabetIndex = Math.floor(Math.random() * 22);
+    console.log(wordList[continent], String.fromCharCode(97 + alphabetIndex));
     var wordIndex = Math.floor(
       Math.random() *
         wordList[continent][String.fromCharCode(97 + alphabetIndex)].length
@@ -91,6 +92,11 @@ const WordGame = () => {
     let matchCount = 0;
     let status = boardData.status;
 
+    const correctIndex = {};
+    [...word].forEach((l, i) => {
+      if (solution.charAt(i) === l) correctIndex[l] = i;
+    });
+
     for (var index = 0; index < word.length; index++) {
       if (solution.charAt(index) === word.charAt(index)) {
         matchCount++;
@@ -102,7 +108,10 @@ const WordGame = () => {
             presentCharArray.indexOf(word.charAt(index)),
             1
           );
-      } else if (solution.includes(word.charAt(index))) {
+      } else if (
+        solution.includes(word.charAt(index)) &&
+        !correctIndex[word.charAt(index)]
+      ) {
         rowStatus.push("present");
         if (
           !correctCharArray.includes(word.charAt(index)) &&
@@ -151,7 +160,7 @@ const WordGame = () => {
     if (key === "ENTER") {
       if (charArray.length === 6) {
         let word = charArray.join("").toLowerCase();
-        if (!wordList[continent][word.charAt(0)].includes(word)) {
+        if (!wordList.all[word.charAt(0)].includes(word)) {
           handleError();
           handleMessage("Not a valid city");
           return;
