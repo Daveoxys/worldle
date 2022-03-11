@@ -14,8 +14,8 @@ const WordGame = () => {
   const { continent } = useParams();
 
   const resetBoard = () => {
-    var alphabetIndex = Math.floor(Math.random() * 22);
-    console.log(wordList[continent], String.fromCharCode(97 + alphabetIndex));
+    var alphabetIndex = Math.floor(Math.random() * 1);
+
     var wordIndex = Math.floor(
       Math.random() *
         wordList[continent][String.fromCharCode(97 + alphabetIndex)].length
@@ -42,7 +42,7 @@ const WordGame = () => {
 
   useEffect(() => {
     if (!boardData || !boardData.solution) {
-      var alphabetIndex = Math.floor(Math.random() * 22);
+      var alphabetIndex = Math.floor(Math.random() * 1);
       var wordIndex = Math.floor(
         Math.random() *
           wordList[continent][String.fromCharCode(97 + alphabetIndex)].length
@@ -93,8 +93,8 @@ const WordGame = () => {
     let status = boardData.status;
 
     const correctIndex = {};
-    [...word].forEach((l, i) => {
-      if (solution.charAt(i) === l) correctIndex[l] = i;
+    [...word].forEach((letter, index) => {
+      if (solution.charAt(index) === letter) correctIndex[letter] = index;
     });
 
     for (var index = 0; index < word.length; index++) {
@@ -185,7 +185,7 @@ const WordGame = () => {
   return (
     <div className="container">
       <div className="top">
-        <h3>{continent}</h3>
+        <h3>{wordList[continent].name}</h3>
         <button className="reset-board" onClick={resetBoard}>
           {"\u27f3"}
         </button>
