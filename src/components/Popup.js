@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../data/images/Logo.png";
 import present from "../data/images/Present.png";
 import correct from "../data/images/Correct.png";
 import wrong from "../data/images/Wrong.png";
@@ -13,11 +14,14 @@ function Popup(props) {
         </button>
         {props.children}
         <h3>Welcome to Worldle!</h3>
-        <p>Guess a six-letter city from one of the world's continents.</p>
+        <p>Guess a six-letter city name from one of the world's continents.</p>
         <p>
           You will have five attempts to correctly guess the city in each
-          continent. After each try any correct letters in your guess will show
-          how close you were to the correct answer.
+          continent.
+          <p>
+            After each guess, the colour of the tiles will indicate how close
+            your guess was to the name of the city.
+          </p>
         </p>
         <hr />
         <h3>Examples</h3>
