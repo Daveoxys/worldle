@@ -9,6 +9,9 @@
   justify-content: center;
   align-items: center;
 }
+.images {
+  size: 20%;
+}
 
 .popup-inner {
   position: relative;
@@ -16,7 +19,7 @@
   border-radius: 9px;
   width: 100%;
   max-width: 640px;
-  background-color: #787c7e;
+  background-color: #8f8f8fa4;
 }
 
 .popup-inner .close-btn {
