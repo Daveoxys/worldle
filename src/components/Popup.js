@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../data/images/Logo.png";
 import present from "../data/images/Present.png";
 import correct from "../data/images/Correct.png";
 import wrong from "../data/images/Wrong.png";

@@ -126,7 +126,9 @@ const WordGame = () => {
     }
     if (matchCount === 6) {
       status = "WIN";
-      handleMessage("YOU WON");
+      handleMessage(
+        `Well done, you have successfully conquered ${wordList[continent].name}!`
+      );
     } else if (rowIndex + 1 === 5) {
       status = "LOST";
       handleMessage(`Answer: ${boardData.solution}`);
@@ -186,9 +188,6 @@ const WordGame = () => {
     <div className="container">
       <div className="top">
         <h3>{wordList[continent].name}</h3>
-        <button className="reset-board" onClick={resetBoard}>
-          {"\u27f3"}
-        </button>
       </div>
       {message && <div className="message">{message}</div>}
       <div className="cube">

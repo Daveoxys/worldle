@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   height: 80vh;
+  font-size: 25px;
 }
 
 .message {
@@ -41,13 +42,6 @@
   width: 60px;
   height: 60px;
   border: 2px solid #d3d6da;
-}
-
-.reset-board {
-  padding: 5px;
-  background: none;
-  color: #6aaa64;
-  font-size: 38px;
 }
 
 .top {
