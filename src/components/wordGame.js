@@ -187,8 +187,9 @@ const WordGame = () => {
   return (
     <div className="container">
       <div className="top">
-        <h3>{wordList[continent].name}</h3>
+        <h3>{wordList[continent].name}</h3>{" "}
       </div>
+      <div className="image">{wordList[continent].image}</div>
       {message && <div className="message">{message}</div>}
       <div className="cube">
         {[0, 1, 2, 3, 4].map((row, rowIndex) => (
