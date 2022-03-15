@@ -1,6 +1,14 @@
+import europe from "../data/images/Europe.png";
+import northAmerica from "../data/images/NorthAmerica.png";
+import southAmerica from "../data/images/SouthAmerica.png";
+import africa from "../data/images/Africa.png";
+import asia from "../data/images/Asia.png";
+import oceania from "../data/images/Oceania.png";
+
 export const wordList = {
   eu: {
     name: "Europe",
+    image: <img src={europe} alt="europe" />,
     a: [
       "athens",
       "berlin",
@@ -33,6 +41,7 @@ export const wordList = {
   },
   na: {
     name: "North America",
+    image: <img src={northAmerica} alt="namerica" />,
     a: [
       "austin",
       "auburn",
@@ -59,6 +68,7 @@ export const wordList = {
   },
   sa: {
     name: "South America",
+    image: <img src={southAmerica} alt="samerica" />,
     a: [
       "bogota",
       "campos",
@@ -73,6 +83,7 @@ export const wordList = {
   },
   af: {
     name: "Africa",
+    image: <img src={africa} alt="africa" />,
     a: [
       "durban",
       "harare",
@@ -89,6 +100,7 @@ export const wordList = {
   },
   as: {
     name: "Asia",
+    image: <img src={asia} alt="asia" />,
     a: [
       "bombay",
       "jaipur",
@@ -112,6 +124,7 @@ export const wordList = {
   },
   oc: {
     name: "Oceania",
+    image: <img src={oceania} alt="oceania" />,
     a: ["darwin", "sydney", "cairns", "mackay", "noumea", "albury", "madang"],
   },
 

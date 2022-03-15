@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   height: 80vh;
+  font-size: 25px;
 }
 
 .message {
@@ -16,6 +17,14 @@
   background: #787c7e;
   font-size: 16px;
   z-index: 1;
+}
+
+.image {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin-top: 155px;
 }
 
 .cube-row {
@@ -40,20 +49,7 @@
   font-weight: 700;
   width: 60px;
   height: 60px;
-  border: 2px solid #d3d6da;
-}
-
-.reset-board {
-  padding: 5px;
-  background: none;
-  color: #6aaa64;
-  font-size: 38px;
-}
-
-.top {
-  display: flex;
-  flex-direction: row;
-  padding: 1px 20px;
+  border: 2px solid #c1c3c7;
 }
 
 .cube-row.error {
