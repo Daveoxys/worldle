@@ -1,5 +1,7 @@
 # Worldle
 
+![Worldle](./src/data/images/Logo.png "Worldle Logo")
+
 Have you played Wordle and become enraged at the American spelling of a word?
 
 Now you can play Worldle and lose the will to live thinking of the name of North American cities!
