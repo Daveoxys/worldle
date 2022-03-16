@@ -9,6 +9,7 @@ Now you can play Worldle and lose the will to live thinking of the name of North
 Worldle is a city based word game! Use the interactive map and test your geography as you guess the name of a random city. Guess the city on every continent and then come back tomorrow to do it all over again.
 
 Wordle was created by Dave Taylor (https://github.com/Daveoxys) and me!
+
 React World Map used from GitHub repo (https://github.com/heatherbooker/react-world-map#readme)
 
 --
