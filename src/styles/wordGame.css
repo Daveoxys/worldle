@@ -20,11 +20,12 @@
 }
 
 .image {
+  display: flex;
   position: absolute;
   max-width: 100%;
   max-height: 100%;
   display: block;
-  margin-top: 75px;
+  margin-top: 165px;
 }
 
 .cube-row {

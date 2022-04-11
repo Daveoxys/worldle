@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Keyboard from "./Keyboard";
-import { wordList } from "../data/words";
+import { wordList } from "../data/words5";
 import "../styles/wordGame.css";
 
 const WordGame = () => {
@@ -15,7 +15,6 @@ const WordGame = () => {
 
   const resetBoard = () => {
     var alphabetIndex = Math.floor(Math.random() * 1);
-
     var wordIndex = Math.floor(
       Math.random() *
         wordList[continent][String.fromCharCode(97 + alphabetIndex)].length
@@ -189,6 +188,7 @@ const WordGame = () => {
       <div className="top">
         <h3>{wordList[continent].name}</h3>{" "}
       </div>
+      <div className="image">{wordList[continent].image}</div>
       {message && <div className="message">{message}</div>}
       <div className="cube">
         {[0, 1, 2, 3, 4].map((row, rowIndex) => (
@@ -218,7 +218,6 @@ const WordGame = () => {
       <div className="bottom">
         <Keyboard boardData={boardData} handleKeyPress={handleKeyPress} />
       </div>
-      <div className="image">{wordList[continent].image}</div>
     </div>
   );
 };
